@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1-dev+20230103.7645611e8d
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 17, 2023 at 07:15 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.1.10
+-- Host: 127.0.0.1
+-- Generation Time: Apr 18, 2023 at 08:51 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -74,8 +74,88 @@ INSERT INTO `tbllocation` (`locationid`, `locationcode`, `name`) VALUES
 
 CREATE TABLE `tblrequest_details` (
   `reqdetailsid` int(11) NOT NULL,
-  `reqsummaryid` int(11) DEFAULT NULL
+  `reqsummaryid` int(11) DEFAULT NULL,
+  `nickname` varchar(45) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `itemcode` varchar(45) DEFAULT NULL,
+  `locationcode` varchar(45) DEFAULT NULL,
+  `xdate` date DEFAULT NULL,
+  `xtime` time DEFAULT NULL,
+  `emailusername` varchar(100) DEFAULT NULL,
+  `mobileno` varchar(100) DEFAULT NULL,
+  `landlineno` varchar(100) DEFAULT NULL,
+  `localcode` varchar(20) DEFAULT NULL,
+  `eqptsftware` varchar(50) DEFAULT NULL,
+  `confictrequested` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblrequest_details`
+--
+
+INSERT INTO `tblrequest_details` (`reqdetailsid`, `reqsummaryid`, `nickname`, `birthdate`, `description`, `itemcode`, `locationcode`, `xdate`, `xtime`, `emailusername`, `mobileno`, `landlineno`, `localcode`, `eqptsftware`, `confictrequested`) VALUES
+(1, 108, NULL, NULL, '<p>SDFJSFJSFFJS</p><p><br></p><p>SDFJSDFJDSFJSD</p>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 115, NULL, NULL, '<p>broken lines when printing on pages</p>', 'SR6237234', 'RO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 116, NULL, NULL, '<p>STARBOOKS 2023</p>', NULL, NULL, '2023-04-19', '08:00:00', NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 117, NULL, NULL, '<p>STARBOOKS 2023</p>', NULL, NULL, '2023-04-19', '23:00:00', NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 118, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'rocj@region10.dost.gov.ph', NULL, NULL, NULL, NULL, NULL),
+(6, 120, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'test@region10.dost.gov.ph', '09453166236, 1569935492', '2394923, 232396239', '532', NULL, NULL),
+(7, 121, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Adobe Photoshop', NULL),
+(8, 124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device'),
+(9, 125, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device'),
+(10, 126, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device'),
+(11, 127, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Epson Projector'),
+(12, 128, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Epson Projector, Logitech Video Conference device');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblrequest_summary`
+--
+
+CREATE TABLE `tblrequest_summary` (
+  `reqsummaryid` int(11) NOT NULL,
+  `documentnumber` varchar(45) DEFAULT NULL,
+  `fname` varchar(100) DEFAULT NULL,
+  `mname` varchar(100) DEFAULT NULL,
+  `lname` varchar(100) DEFAULT NULL,
+  `suffix` varchar(10) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `mobileno` varchar(45) DEFAULT NULL,
+  `position` varchar(100) DEFAULT NULL,
+  `divisioncode` varchar(45) DEFAULT NULL,
+  `locationcode` varchar(45) DEFAULT NULL,
+  `unitid` int(11) DEFAULT NULL,
+  `requestcode` varchar(45) DEFAULT NULL,
+  `acknowledgedby` int(11) DEFAULT NULL,
+  `resolvedby` int(11) DEFAULT NULL,
+  `xstatus` varchar(45) DEFAULT NULL,
+  `date_created` datetime DEFAULT current_timestamp(),
+  `date_acknowledged` datetime DEFAULT NULL,
+  `date_resolved` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblrequest_summary`
+--
+
+INSERT INTO `tblrequest_summary` (`reqsummaryid`, `documentnumber`, `fname`, `mname`, `lname`, `suffix`, `email`, `mobileno`, `position`, `divisioncode`, `locationcode`, `unitid`, `requestcode`, `acknowledgedby`, `resolvedby`, `xstatus`, `date_created`, `date_acknowledged`, `date_resolved`) VALUES
+(108, '2023-0001', '', '', '', '', '', '', '', 'ORD', 'RO', 2, 'OTHERS', NULL, NULL, NULL, '2023-04-18 10:23:57', NULL, NULL),
+(115, '2023-0002', '', '', '', '', '', '', '', 'ORD', 'RO', 3, 'ICTREP', NULL, NULL, NULL, '2023-04-18 10:46:23', NULL, NULL),
+(116, '2023-0003', '', '', '', '', '', '', '', 'ORD', 'RO', 1, 'TECHSUPP', NULL, NULL, NULL, '2023-04-18 10:56:44', NULL, NULL),
+(117, '2023-0004', '', '', '', '', '', '', '', 'ORD', 'RO', 1, 'TECHSUPP', NULL, NULL, NULL, '2023-04-18 10:57:08', NULL, NULL),
+(118, '2023-0005', '', '', '', '', '', '', '', 'ORD', 'RO', 1, 'EMLCREA', NULL, NULL, NULL, '2023-04-18 11:01:30', NULL, NULL),
+(119, '2023-0006', '', '', '', '', '', '', '', 'ORD', 'RO', 1, 'EMLSIG', NULL, NULL, NULL, '2023-04-18 11:12:47', NULL, NULL),
+(120, '2023-0007', '', '', '', '', '', '', '', 'ORD', 'RO', 1, 'EMLSIG', NULL, NULL, NULL, '2023-04-18 11:12:56', NULL, NULL),
+(121, '2023-0008', '', '', '', '', '', '', '', 'ORD', 'RO', 3, 'ICTSETUP', NULL, NULL, NULL, '2023-04-18 11:17:59', NULL, NULL),
+(122, '2023-0009', '', '', '', '', '', '', '', 'ORD', 'RO', 1, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:26:56', NULL, NULL),
+(123, '2023-0010', '', '', '', '', '', '', '', 'ORD', 'RO', 1, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:27:29', NULL, NULL),
+(124, '2023-0011', '', '', '', '', '', '', '', 'ORD', 'RO', 2, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:28:15', NULL, NULL),
+(125, '2023-0012', '', '', '', '', '', '', '', 'ORD', 'RO', 3, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:30:17', NULL, NULL),
+(126, '2023-0013', '', '', '', '', '', '', '', 'ORD', 'RO', 3, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:30:20', NULL, NULL),
+(127, '2023-0014', '', '', '', '', '', '', '', 'ORD', 'RO', 2, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:43:31', NULL, NULL),
+(128, '2023-0015', '', '', '', '', '', '', '', 'ORD', 'RO', 2, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:43:43', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -150,32 +230,6 @@ CREATE TABLE `tblusers` (
   `password` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tlbrequest_summary`
---
-
-CREATE TABLE `tlbrequest_summary` (
-  `reqsummaryid` int(11) NOT NULL,
-  `fname` varchar(100) DEFAULT NULL,
-  `mname` varchar(100) DEFAULT NULL,
-  `lname` varchar(100) DEFAULT NULL,
-  `suffix` varchar(10) DEFAULT NULL,
-  `email` varchar(200) DEFAULT NULL,
-  `phone` varchar(45) DEFAULT NULL,
-  `position` varchar(100) DEFAULT NULL,
-  `divisionid` int(11) DEFAULT NULL,
-  `unitid` int(11) DEFAULT NULL,
-  `requesttypeid` int(11) DEFAULT NULL,
-  `acknowledgedby` int(11) DEFAULT NULL,
-  `resolvedby` int(11) DEFAULT NULL,
-  `xstatus` varchar(45) DEFAULT NULL,
-  `date_created` datetime DEFAULT current_timestamp(),
-  `date_acknowledged` datetime DEFAULT NULL,
-  `date_resolved` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Indexes for dumped tables
 --
@@ -191,7 +245,8 @@ ALTER TABLE `tbldivision`
 -- Indexes for table `tbllocation`
 --
 ALTER TABLE `tbllocation`
-  ADD PRIMARY KEY (`locationid`);
+  ADD PRIMARY KEY (`locationid`),
+  ADD KEY `tblloc_loccode_idx` (`locationcode`);
 
 --
 -- Indexes for table `tblrequest_details`
@@ -201,10 +256,24 @@ ALTER TABLE `tblrequest_details`
   ADD KEY `reqdet_reqsumm_fk_idx` (`reqsummaryid`);
 
 --
+-- Indexes for table `tblrequest_summary`
+--
+ALTER TABLE `tblrequest_summary`
+  ADD PRIMARY KEY (`reqsummaryid`),
+  ADD UNIQUE KEY `reqsumm_docnum` (`documentnumber`),
+  ADD KEY `reqsumm_unitid_fk_idx` (`unitid`),
+  ADD KEY `reqsumm_resby_fk_idx` (`resolvedby`),
+  ADD KEY `reqsumm_ackby_fk_idx` (`acknowledgedby`),
+  ADD KEY `reqsumm_reqcode_fk_idx` (`requestcode`),
+  ADD KEY `reqsumm_divcode_fk_idx` (`divisioncode`),
+  ADD KEY `reqsumm_loccode_fk_idx` (`locationcode`);
+
+--
 -- Indexes for table `tblrequest_types`
 --
 ALTER TABLE `tblrequest_types`
-  ADD PRIMARY KEY (`requesttypeid`);
+  ADD PRIMARY KEY (`requesttypeid`),
+  ADD KEY `REQCODE` (`requestcode`);
 
 --
 -- Indexes for table `tblunit`
@@ -218,17 +287,6 @@ ALTER TABLE `tblunit`
 --
 ALTER TABLE `tblusers`
   ADD PRIMARY KEY (`userid`);
-
---
--- Indexes for table `tlbrequest_summary`
---
-ALTER TABLE `tlbrequest_summary`
-  ADD PRIMARY KEY (`reqsummaryid`),
-  ADD KEY `reqsumm_divisionid_fk_idx` (`divisionid`),
-  ADD KEY `reqsumm_unitid_fk_idx` (`unitid`),
-  ADD KEY `reqsumm_reqtypeid_fk_idx` (`requesttypeid`),
-  ADD KEY `reqsumm_resby_fk_idx` (`resolvedby`),
-  ADD KEY `reqsumm_ackby_fk_idx` (`acknowledgedby`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -250,7 +308,13 @@ ALTER TABLE `tbllocation`
 -- AUTO_INCREMENT for table `tblrequest_details`
 --
 ALTER TABLE `tblrequest_details`
-  MODIFY `reqdetailsid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `reqdetailsid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `tblrequest_summary`
+--
+ALTER TABLE `tblrequest_summary`
+  MODIFY `reqsummaryid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT for table `tblrequest_types`
@@ -271,12 +335,6 @@ ALTER TABLE `tblusers`
   MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tlbrequest_summary`
---
-ALTER TABLE `tlbrequest_summary`
-  MODIFY `reqsummaryid` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- Constraints for dumped tables
 --
 
@@ -284,23 +342,24 @@ ALTER TABLE `tlbrequest_summary`
 -- Constraints for table `tblrequest_details`
 --
 ALTER TABLE `tblrequest_details`
-  ADD CONSTRAINT `reqdet_reqsumm_fk` FOREIGN KEY (`reqsummaryid`) REFERENCES `tlbrequest_summary` (`reqsummaryid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `reqdet_reqsumm_fk` FOREIGN KEY (`reqsummaryid`) REFERENCES `tblrequest_summary` (`reqsummaryid`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tblrequest_summary`
+--
+ALTER TABLE `tblrequest_summary`
+  ADD CONSTRAINT `reqsumm_ackby_fk` FOREIGN KEY (`acknowledgedby`) REFERENCES `tblusers` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `reqsumm_divcode_fk` FOREIGN KEY (`divisioncode`) REFERENCES `tbldivision` (`divisioncode`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `reqsumm_loccode_fk` FOREIGN KEY (`locationcode`) REFERENCES `tbllocation` (`locationcode`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `reqsumm_reqcode_fk` FOREIGN KEY (`requestcode`) REFERENCES `tblrequest_types` (`requestcode`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `reqsumm_resby_fk` FOREIGN KEY (`resolvedby`) REFERENCES `tblusers` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `reqsumm_unitid_fk` FOREIGN KEY (`unitid`) REFERENCES `tblunit` (`unitid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `tblunit`
 --
 ALTER TABLE `tblunit`
   ADD CONSTRAINT `tblloc_divcode_fk` FOREIGN KEY (`divisioncode`) REFERENCES `tbldivision` (`divisioncode`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `tlbrequest_summary`
---
-ALTER TABLE `tlbrequest_summary`
-  ADD CONSTRAINT `reqsumm_ackby_fk` FOREIGN KEY (`acknowledgedby`) REFERENCES `tblusers` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reqsumm_divisionid_fk` FOREIGN KEY (`divisionid`) REFERENCES `tbldivision` (`divisionid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reqsumm_reqtypeid_fk` FOREIGN KEY (`requesttypeid`) REFERENCES `tblrequest_types` (`requesttypeid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reqsumm_resby_fk` FOREIGN KEY (`resolvedby`) REFERENCES `tblusers` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `reqsumm_unitid_fk` FOREIGN KEY (`unitid`) REFERENCES `tblunit` (`unitid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
