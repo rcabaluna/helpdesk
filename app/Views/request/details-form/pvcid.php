@@ -7,8 +7,8 @@
         <label for="txtsex">Sex <span class="text-danger">*</span></label>
         <select name="sex" id="txtsex" class="form-control" required>
             <option></option>
-            <option value="">Male</option>
-            <option value="">Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
         </select>
     </div>
     <div class="form-group col-md-6">
@@ -19,14 +19,14 @@
         <label for="txtbloodtype">Blood Type <span class="text-danger">*</span></label>
         <select name="bloodtype" id="txtbloodtype" class="form-control">
             <option></option>
-            <option value="">AB+</option>
-            <option value="">B+</option>
-            <option value="">A+</option>
-            <option value="">O+</option>
-            <option value="">O-</option>
-            <option value="">A-</option>
-            <option value="">B-</option>
-            <option value="">AB-</option>
+            <option value="AB+">AB+</option>
+            <option value="B+">B+</option>
+            <option value="A+">A+</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="A-">A-</option>
+            <option value="B-">B-</option>
+            <option value="AB-">AB-</option>
         </select>
     </div>
     <div class="form-group col-md-6">

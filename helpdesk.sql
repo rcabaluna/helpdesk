@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1-dev+20230103.7645611e8d
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 18, 2023 at 08:51 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Host: localhost
+-- Generation Time: Apr 18, 2023 at 10:32 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -87,26 +87,43 @@ CREATE TABLE `tblrequest_details` (
   `landlineno` varchar(100) DEFAULT NULL,
   `localcode` varchar(20) DEFAULT NULL,
   `eqptsftware` varchar(50) DEFAULT NULL,
-  `confictrequested` varchar(50) DEFAULT NULL
+  `confictrequested` varchar(50) DEFAULT NULL,
+  `empaddress` text DEFAULT NULL,
+  `sex` varchar(10) DEFAULT NULL,
+  `bloodtype` varchar(10) DEFAULT NULL,
+  `officeemail` varchar(100) DEFAULT NULL,
+  `personalemail` varchar(100) DEFAULT NULL,
+  `tin` varchar(45) DEFAULT NULL,
+  `sssno` varchar(45) DEFAULT NULL,
+  `gsisno` varchar(45) DEFAULT NULL,
+  `hdmfno` varchar(45) DEFAULT NULL,
+  `phicno` varchar(45) DEFAULT NULL,
+  `guardianname` varchar(100) DEFAULT NULL,
+  `guardianmobile` varchar(45) DEFAULT NULL,
+  `guardianaddress` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tblrequest_details`
 --
 
-INSERT INTO `tblrequest_details` (`reqdetailsid`, `reqsummaryid`, `nickname`, `birthdate`, `description`, `itemcode`, `locationcode`, `xdate`, `xtime`, `emailusername`, `mobileno`, `landlineno`, `localcode`, `eqptsftware`, `confictrequested`) VALUES
-(1, 108, NULL, NULL, '<p>SDFJSFJSFFJS</p><p><br></p><p>SDFJSDFJDSFJSD</p>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 115, NULL, NULL, '<p>broken lines when printing on pages</p>', 'SR6237234', 'RO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 116, NULL, NULL, '<p>STARBOOKS 2023</p>', NULL, NULL, '2023-04-19', '08:00:00', NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 117, NULL, NULL, '<p>STARBOOKS 2023</p>', NULL, NULL, '2023-04-19', '23:00:00', NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 118, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'rocj@region10.dost.gov.ph', NULL, NULL, NULL, NULL, NULL),
-(6, 120, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'test@region10.dost.gov.ph', '09453166236, 1569935492', '2394923, 232396239', '532', NULL, NULL),
-(7, 121, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Adobe Photoshop', NULL),
-(8, 124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device'),
-(9, 125, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device'),
-(10, 126, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device'),
-(11, 127, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Epson Projector'),
-(12, 128, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Epson Projector, Logitech Video Conference device');
+INSERT INTO `tblrequest_details` (`reqdetailsid`, `reqsummaryid`, `nickname`, `birthdate`, `description`, `itemcode`, `locationcode`, `xdate`, `xtime`, `emailusername`, `mobileno`, `landlineno`, `localcode`, `eqptsftware`, `confictrequested`, `empaddress`, `sex`, `bloodtype`, `officeemail`, `personalemail`, `tin`, `sssno`, `gsisno`, `hdmfno`, `phicno`, `guardianname`, `guardianmobile`, `guardianaddress`) VALUES
+(1, 108, NULL, NULL, '<p>SDFJSFJSFFJS</p><p><br></p><p>SDFJSDFJDSFJSD</p>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 115, NULL, NULL, '<p>broken lines when printing on pages</p>', 'SR6237234', 'RO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 116, NULL, NULL, '<p>STARBOOKS 2023</p>', NULL, NULL, '2023-04-19', '08:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 117, NULL, NULL, '<p>STARBOOKS 2023</p>', NULL, NULL, '2023-04-19', '23:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 118, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'rocj@region10.dost.gov.ph', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 120, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'test@region10.dost.gov.ph', '09453166236, 1569935492', '2394923, 232396239', '532', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 121, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Adobe Photoshop', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, 125, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, 126, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Logitech Video Conference device', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, 127, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Epson Projector', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 128, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Epson Projector, Logitech Video Conference device', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, 129, NULL, NULL, '<p>ASDADAD</p><p><br></p><p>AS</p><p>DA</p><p>DA</p><p>DADASDAD</p><p>ASDASDADAD</p>', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 134, NULL, '2023-04-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'blk 11 lot 7, zone 1, punta', 'Male', 'B+', 'rocabalunajr@region10.dost.gov.ph', 'rcabalunajr@gmail.com', '603-736-054-000', '', '', '', '', 'Bie Ann Cabaluna', '09091879122', 'blk 11 lot 7, zone 1, punta'),
+(17, 135, NULL, '2023-04-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'blk 11 lot 7, zone 1, punta', 'Male', 'B+', 'rocabalunajr@region10.dost.gov.ph', 'rcabalunajr@gmail.com', '603-736-054-000', '08-0975964-6', '', '121187466936', '15-050-444521-8', 'Bie Ann Cabaluna', '09091879122', 'blk 11 lot 7, zone 1, punta'),
+(18, 136, NULL, '2023-04-05', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'blk 11 lot 7, zone 1, punta', 'Male', 'B+', 'rocabalunajr@region10.dost.gov.ph', 'rcabalunajr@gmail.com', '603-736-054-000', '08-0975964-6', '123456789', '121187466936', '15-050-444521-8', 'Bie Ann Cabaluna', '09091879122', 'blk 11 lot 7, zone 1, punta');
 
 -- --------------------------------------------------------
 
@@ -155,7 +172,13 @@ INSERT INTO `tblrequest_summary` (`reqsummaryid`, `documentnumber`, `fname`, `mn
 (125, '2023-0012', '', '', '', '', '', '', '', 'ORD', 'RO', 3, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:30:17', NULL, NULL),
 (126, '2023-0013', '', '', '', '', '', '', '', 'ORD', 'RO', 3, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:30:20', NULL, NULL),
 (127, '2023-0014', '', '', '', '', '', '', '', 'ORD', 'RO', 2, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:43:31', NULL, NULL),
-(128, '2023-0015', '', '', '', '', '', '', '', 'ORD', 'RO', 2, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:43:43', NULL, NULL);
+(128, '2023-0015', '', '', '', '', '', '', '', 'ORD', 'RO', 2, 'CONRM', NULL, NULL, NULL, '2023-04-18 11:43:43', NULL, NULL),
+(129, '2023-0016', '', '', '', '', '', '', '', 'ORD', 'RO', 3, 'GRPHDES', NULL, NULL, NULL, '2023-04-18 15:18:01', NULL, NULL),
+(130, '2023-0017', '', '', '', '', '', '', '', 'TSD', 'CAM', 19, 'PVCID', NULL, NULL, NULL, '2023-04-18 15:46:56', NULL, NULL),
+(131, '2023-0018', '', '', '', '', '', '', '', 'TSD', 'CAM', 19, 'PVCID', NULL, NULL, NULL, '2023-04-18 15:47:13', NULL, NULL),
+(134, '2023-0019', '', '', '', '', '', '', '', 'TSD', 'RO', 17, 'PVCID', NULL, NULL, NULL, '2023-04-18 16:15:19', NULL, NULL),
+(135, '2023-0020', '', '', '', '', '', '', '', 'TSD', 'RO', 17, 'PVCID', NULL, NULL, NULL, '2023-04-18 16:15:44', NULL, NULL),
+(136, '2023-0021', '', '', '', '', '', '', '', 'TSD', 'RO', 17, 'PVCID', NULL, NULL, NULL, '2023-04-18 16:16:00', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -207,9 +230,31 @@ CREATE TABLE `tblunit` (
 --
 
 INSERT INTO `tblunit` (`unitid`, `divisioncode`, `name`) VALUES
-(1, 'ORD', 'PMEQ'),
-(2, 'ORD', 'GAD'),
-(3, 'ORD', 'ORD');
+(1, 'ORD', 'Planning, Evaluation, Monitoring, & QMS'),
+(2, 'ORD', 'Gender and Development'),
+(3, 'ORD', 'Office of the Regional Director'),
+(4, 'FASD', 'Accounting'),
+(5, 'FASD', 'Budget'),
+(6, 'FASD', 'Cashier'),
+(7, 'FASD', 'Supply'),
+(8, 'FASD', 'Human Resource'),
+(9, 'FASD', 'Scholarship'),
+(10, 'FASD', 'General Services'),
+(11, 'TSD', 'Consortia'),
+(12, 'TSD ', 'DRDI'),
+(13, 'TSD', 'Consultancy and Training'),
+(14, 'TSD', 'FOB'),
+(15, 'TSD', 'TransDI'),
+(16, 'TSD', 'LGIA and CEST'),
+(17, 'TSD', 'MIS'),
+(18, 'TSD', 'RSTL'),
+(19, 'TSD', 'SCCU'),
+(20, 'TSD', 'iFWDPH'),
+(21, 'TSD', 'SETUP'),
+(22, 'TSD', 'SETUP 2.0'),
+(23, 'TSD', 'Carrot'),
+(24, 'TSD', 'Scicat'),
+(25, 'ORD', 'iSTART');
 
 -- --------------------------------------------------------
 
@@ -308,13 +353,13 @@ ALTER TABLE `tbllocation`
 -- AUTO_INCREMENT for table `tblrequest_details`
 --
 ALTER TABLE `tblrequest_details`
-  MODIFY `reqdetailsid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `reqdetailsid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tblrequest_summary`
 --
 ALTER TABLE `tblrequest_summary`
-  MODIFY `reqsummaryid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `reqsummaryid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `tblrequest_types`
@@ -326,7 +371,7 @@ ALTER TABLE `tblrequest_types`
 -- AUTO_INCREMENT for table `tblunit`
 --
 ALTER TABLE `tblunit`
-  MODIFY `unitid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `unitid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
