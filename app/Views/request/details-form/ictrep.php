@@ -8,11 +8,11 @@
 ?>
 <div class="form-row">
     <div class="form-group col-md-12">
-        <label for="txtfname">Item/Property Code or Serial Number</label>
+        <label for="txtfname">Item/Property Code or Serial Number <span class="text-danger">*</span></label>
         <input type="text" name="itemcode" id="txtitemcode" class="form-control" required>
     </div>
     <div class="form-group col-md-12">
-        <label for="txtfname">Location</label>
+        <label for="txtfname">Location <span class="text-danger">*</span></label>
         <select name="locationcode" id="sellocation" class="form-control" required>
             <option></option>
             <?php foreach ($location as $locationRow) { ?>
@@ -21,11 +21,11 @@
         </select>
     </div>
     <div class="form-group col-md-12">
-        <label for="txtfname">Description of the Problem (Please include Error message/code if applicable)</label>
+        <label for="txtfname">Description of the Problem (Please include Error message/code if applicable) <span class="text-danger">*</span></label>
         <div id="editor" class="form-control"></div>
     </div>
     <div class="form-group col-md-12" id="photoupload-container">
-        <label for="txtfname">Upload Photo (.jpg, .png, .gif) if applicable</label>
+        <label for="txtfname">Upload Photo (.jpg, .png, .gif)</label>
         <input type="file" name="photoupload" id="filephotoupload" class="form-control" accept="image/jpg,image/jpeg,image/png,image/gif">
     </div>
 </div> 

@@ -28,6 +28,12 @@
             case 'CONRM':
                 echo view('request/details-form/conrm');
                 break;
+            case 'GRPHDES':
+                echo view('request/details-form/grphdes');
+                break;
+            case 'PVCID':
+                echo view('request/details-form/pvcid');
+                break;        
         }
     ?>   
     <div class="form-group text-right">
@@ -38,23 +44,21 @@
 <script>
     $("#frm-request-step-three").submit(function (e) { 
 
-
         var description = '';
         var reqdetails = '';
         var strcontainer = '';
         var cntr = 1;
 
-
-        
-        
         switch (requesttype) {
             case "NAMETAG":
             case "EMLCREA":
             case "EMLSIG": 
             case "ICTSETUP":
+            case "PVCID":
                 reqdetails = $("#frm-request-step-three").serialize();
                 break;
             case "OTHERS":
+            case "GRPHDES":
                 description = $(".ql-editor").html();            
                 break;
             case "ICTREP":

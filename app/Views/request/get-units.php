@@ -1,4 +1,4 @@
-<label for="selunit">Unit</label>
+<label for="selunit">Unit <span class="text-danger">*</span></label>
 <div>
     <select name="unitid" id="selunit" class="form-control" required>
         <option></option>

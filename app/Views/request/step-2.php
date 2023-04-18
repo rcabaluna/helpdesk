@@ -3,7 +3,7 @@
 <form id="frm-request-step-two">
     <div class="form-row">
         <div class="form-group col-md-12">
-            <label for="txtfname">ICT Service</label>
+            <label for="txtfname">ICT Service <span class="text-danger">*</span></label>
             <select name="requestcode" id="selreqtype" class="form-control" required>
                 <option></option>
                 <?php foreach ($reqtypes as $reqtypesRow) { ?>

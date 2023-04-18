@@ -1,10 +1,10 @@
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label for="txtfname">Desired Nickname</label>
+        <label for="txtfname">Desired Nickname <span class="text-danger">*</span></label>
         <input type="text" name="nickname" id="txtnickname" class="form-control" required>
     </div>
     <div class="form-group col-md-6">
-        <label for="txtfname">Birthdate</label>
+        <label for="txtfname">Birthdate <span class="text-danger">*</span></label>
         <input type="date" name="birthdate" id="dtebirthdate" class="form-control" required>
     </div>
     <div class="form-group col-md-12">
@@ -25,7 +25,7 @@
     function show_photo_upload_input(x){
 
         if ($(x).val() == "no") {
-            var xinput = `<label for="txtfname">Upload Photo (.jpg, .png, .gif)</label>
+            var xinput = `<label for="txtfname">Upload Photo (.jpg, .png, .gif) <span class="text-danger">*</span></label>
                 <input type="file" name="photoupload" id="filephotoupload" class="form-control" accept="image/jpg,image/jpeg,image/png,image/gif" required>`;
 
             $("#photoupload-container").html(xinput);

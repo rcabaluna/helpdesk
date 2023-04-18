@@ -48,15 +48,15 @@
                                     <form id="frm-request">
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
-                                                <label for="txtfname">Firstname</label>
+                                                <label for="txtfname">Firstname <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" id="txtfname" name="fname" >
                                             </div>
                                             <div class="form-group col-md-3">
-                                                <label for="txtmname">Middlename</label>
+                                                <label for="txtmname">Middlename <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" id="txtmname" name="mname" >
                                             </div>
                                             <div class="form-group col-md-3">
-                                                <label for="txtlname">Lastname</label>
+                                                <label for="txtlname">Lastname <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" id="txtlname" name="lname" >
                                             </div>
                                             <div class="form-group col-md-3">
@@ -72,21 +72,21 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="txtemail">Email</label>
+                                                <label for="txtemail">Email <span class="text-danger">*</span></label>
                                                 <input type="email" class="form-control" id="txtemail" name="email" >
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="txtmobileno">Mobile No</label>
+                                                <label for="txtmobileno">Mobile No <span class="text-danger">*</span></label>
                                                 <input type="number" class="form-control" id="txtmobileno" name="mobileno" >
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="txtposition">Position</label>
+                                                <label for="txtposition">Position <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" id="txtposition" name="position" >
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="seldivision">Division</label>
+                                                <label for="seldivision">Division <span class="text-danger">*</span></label>
                                                 <select name="divisioncode" id="seldivision" class="form-control" onchange="select_location()" >
                                                     <option></option>
                                                     <?php foreach ($division as $divisionRow) { ?>
@@ -97,7 +97,7 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="sellocation">Location</label>
+                                                <label for="sellocation">Location <span class="text-danger">*</span></label>
                                                 <div>
                                                     <select name="locationcode" id="sellocation" class="form-control" >
                                                         <option></option>
@@ -108,7 +108,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6" id="units-container">
-                                            <label for="selunit">Unit</label>
+                                            <label for="selunit">Unit <span class="text-danger">*</span></label>
                                                 <div>
                                                     <select name="unitid" id="selunit" class="form-control" >
                                                         <option></option>

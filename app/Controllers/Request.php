@@ -58,8 +58,6 @@ class Request extends BaseController
             $reqdetails['description'] = $_POST['description'];
         }
 
-     
-
         $countSummary = count($this->requestModel->get_all('tblrequest_summary'))+1;
         $reqsummary['documentnumber'] = date('Y').'-'.str_pad($countSummary, 4, '0', STR_PAD_LEFT);
 

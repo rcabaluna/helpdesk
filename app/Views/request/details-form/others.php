@@ -1,5 +1,5 @@
 
-<h4>Provide a detailed description of your request.</h4>
+<h4>Provide a detailed description of your request. <span class="text-danger">*</span></h4>
 <div id="editor">
     
 </div>
