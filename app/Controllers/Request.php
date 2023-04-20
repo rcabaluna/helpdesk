@@ -18,7 +18,7 @@ class Request extends BaseController
     }
 
 
-    public function index()
+    public function request()
     {
         $data['division'] = $this->requestModel->get_all('tbldivision');
         $data['location'] = $this->requestModel->get_all('tbllocation');
@@ -70,11 +70,10 @@ class Request extends BaseController
 
            var_dump($reqdetails);
         exit();     
+    }
 
-        
-        
-
-
+    public function trackRequest(){
+        return view('request/track.php');
     }
     
 }

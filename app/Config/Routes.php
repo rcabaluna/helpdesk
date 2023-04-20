@@ -30,7 +30,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Request::index');
+$routes->get('/request', 'Request::request');
+$routes->get('request/track', 'Request::trackRequest');
 
 /*
  * --------------------------------------------------------------------

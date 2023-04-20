@@ -30,8 +30,8 @@
                         <div>
                             <h1 class="text-white m-b-20 font-weight-normal">DOST 10 ICT Services</h1>
                             <p class="text-white font-size-16 lh-2 w-80 opacity-08">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non facilis voluptates illo deleniti? Laboriosam omnis beatae quasi cumque, maxime culpa repellat tenetur, distinctio ipsa voluptate tempora eius sit earum.</p>
-                            <button class="btn btn-secondary btn-tone m-r-5">Create Request</button>
-                            <button class="btn btn-info btn-tone m-r-5">Follow up Request</button>
+                            <a href="<?=base_url('request');?>"><button class="btn btn-secondary btn-tone m-r-5 active">Create Request</button></a>
+                            <a href="<?=base_url('request/track');?>"><button class="btn btn-info btn-tone m-r-5">Track Request</button></a>
                         </div>
                         <div class="d-flex justify-content-between">
                             <span class="text-white">© <?=date('Y')?> <a href="https://region10.dost.gov.ph/">DOST 10</a></span>
