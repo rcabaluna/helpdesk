@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>DOST 10 | Helpdesk </title>
+    <title>DOST 10 | ICT Service Request</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?=base_url('assets/images/logo/favicon.png'); ?>">
@@ -13,39 +13,39 @@
 
     <!-- Core css -->
     <link href="<?=base_url('assets/css/app.min.css'); ?>" rel="stylesheet">
-    <script>
-        var BASE_URL = '<?=base_url('');?>';
-    </script>
+
 </head>
 
 <body>
     <div class="app">
-        <div class="container-fluid p-0 h-100">
-            <div class="row no-gutters h-100 full-height">
-                <div class="col-lg-4 d-none d-lg-flex bg" style="background-image:url('<?=base_url('assets/images/others/bg.jpg'); ?>')">
-                    <div class="d-flex h-100 p-h-40 p-v-15 flex-column justify-content-between">
-                        <div style="max-height:10%;">
-                            <img src="<?=base_url('assets/images/logo/logo.png'); ?>" style="max-height:100%;">
+        <div class="layout">
+
+            <!-- Page Container START -->
+            <div class="container">
+                
+
+                <!-- Content Wrapper START -->
+                <div class="main-content">
+                    <div class="container">
+                        <div class="text-center m-t-30 m-b-40">
+                            <h2>Subscription plans</h2>
+                            <p class="w-45 m-h-auto m-b-30">Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face.</p>
                         </div>
-                        <div>
-                            <h1 class="text-white m-b-20 font-weight-normal">DOST 10 ICT Services</h1>
-                            <p class="text-white font-size-16 lh-2 w-80 opacity-08">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non facilis voluptates illo deleniti? Laboriosam omnis beatae quasi cumque, maxime culpa repellat tenetur, distinctio ipsa voluptate tempora eius sit earum.</p>
-                            <button class="btn btn-secondary btn-tone m-r-5">Create Request</button>
-                            <button class="btn btn-info btn-tone m-r-5">Follow up Request</button>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <span class="text-white">© <?=date('Y')?> <a href="https://region10.dost.gov.ph/">DOST 10</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 bg-white">
-                    <div class="container h-100">
-                        <div class="row no-gutters h-100 align-items-center">
-                            <div class="col-md-8 col-lg-7 col-xl-10 mx-auto">
-                                <div id="main-frm-container">
-                                    <h2>STEP 1: Requester Contact Information</h2>
-                                    <p class="m-b-30">Please fill out the form below:</p>
-                                    <form id="frm-request">
+                        <div class="row align-items-center" id="monthly-view">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between p-b-20 border-bottom">
+                                            <div class="media align-items-center">
+                                                <div class="m-l-15">
+                                                    <h4>STEP 1: Requester Contact Information</h4>
+                                                    <p>Please fill out the form below:</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="list-unstyled m-v-30">
+                                            <li class="m-b-20">
+                                            <form id="frm-request">
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
                                                 <label for="txtfname">Firstname <span class="text-danger">*</span></label>
@@ -120,74 +120,39 @@
                                             <button type="submit" class="btn btn-primary">Next</button>
                                         </div>
                                     </form>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
+                <!-- Content Wrapper END -->
+
+                <!-- Footer START -->
+                <footer class="footer">
+                    <div class="text-center">
+                        <p class="m-b-0 ">Copyright © <?=date('Y')?> <a href="https://region10.dost.gov.ph">DOST 10</a>. All rights reserved.</p>
+                    </div>
+                </footer>
+                <!-- Footer END -->
+
             </div>
+            <!-- Page Container END -->
         </div>
     </div>
+
     
     <!-- Core Vendors JS -->
     <script src="<?=base_url('assets/js/vendors.min.js'); ?>"></script>
+
     <!-- page js -->
-    <script src="<?=base_url('assets/vendors/jquery-validation/jquery.validate.min.js'); ?>"></script>
-    <script src="<?=base_url('assets/vendors/quill/quill.min.js'); ?>"></script>
+    <script src="<?=base_url('assets//js/pages/pricing.js'); ?>"></script>
+
     <!-- Core JS -->
     <script src="<?=base_url('assets/js/app.min.js'); ?>"></script>
 
-    <script>
-        var reqsummary;
-        var requesttype;
-
-        function select_location(){
-            var divisionval = $("#seldivision").val() ;
-
-            if (divisionval == '') {
-                $("#sellocation").val("").attr('disabled',false);
-                return;
-            }
-
-            if(divisionval != "TSD"){
-                $("#sellocation").val("RO").attr('disabled',true);
-            }else{
-                $("#sellocation").val("").attr('disabled',false);
-            }
-            get_units(divisionval);
-        }
-
-        function get_units(divisionval){
-            $.post(BASE_URL + "request/getUnits", {
-                divisionval:divisionval
-            }, function(data) {
-                $("#units-container").html(data);
-            })
-        }
-
-        $("#frm-request").submit(function (e) {
-            var disabled = $("#frm-request").find(':input:disabled').removeAttr('disabled');
-            reqsummary = $("#frm-request").serialize();
-            disabled.attr('disabled','disabled');
-            show_step_two();
-            e.preventDefault();
-        });
-
-        function show_step_two(){
-            $.post(BASE_URL + "request/showStepTwo", {
-            }, function(data) {
-                $("#main-frm-container").html(data);
-            })
-        }
-
-        function show_step_three(){
-            $.post(BASE_URL + "request/showStepThree", {
-                requesttype:requesttype
-            }, function(data) {
-                $("#main-frm-container").html(data);
-            })
-        }
-    </script>
 </body>
 
 </html>
