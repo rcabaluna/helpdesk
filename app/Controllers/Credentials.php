@@ -4,8 +4,6 @@ namespace App\Controllers;
 
 use App\Models\CredentialsModel;
 
-
-
 class Credentials extends BaseController
 {
 
@@ -34,18 +32,28 @@ class Credentials extends BaseController
 
             $userdetails = $this->credentialsModel->get_single_data_where('tblusers',array('username' => $input['username']));
 
-            if (!$userdetails) {
-                $data['msgstatus'] = 'error';
-            }else{
+            if ($userdetails) {
                 $verifyuser = password_verify($input['password'],$userdetails['password']);
                 if(!$verifyuser) {
                     $data['msgstatus'] = 'error';
                 }
                 else {
                     unset($userdetails['password']);
-                    $this->session->set($userdetails);
+
+                    $newdata = [
+                        'username'  => 'johndoe',
+                        'email'     => 'johndoe@some-site.com',
+                        'logged_in' => TRUE
+                    ];
+                    $this->session->set($newdata);
+
+                    var_dump($this->session->get());
+                    exit();
+
                     return redirect()->to(base_url('my-requests/list')); 
                 }
+            }else{
+                $data['msgstatus'] = 'error';
             }
         }
         

@@ -8,8 +8,6 @@ use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
-
-
 /**
  * Class BaseController
  *
@@ -41,6 +39,7 @@ abstract class BaseController extends Controller
      * @var array
      */
     protected $helpers = [];
+    protected $session;
 
     /**
      * Be sure to declare properties for any property fetch you initialized.
@@ -57,9 +56,8 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-
-        // E.g.: $this->session = \Config\Services::session();
-
         $this->session = \Config\Services::session();
+
+
     }
 }

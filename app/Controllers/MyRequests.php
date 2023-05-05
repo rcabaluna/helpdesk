@@ -7,7 +7,7 @@ use App\Models\RequestModel;
 
 class MyRequests extends BaseController
 {
-    private $requestModel;
+    private $requestModel; 
 
     public function __construct()
     {
@@ -31,7 +31,7 @@ class MyRequests extends BaseController
     public function getForm(){
         $requestcode = $this->request->getPost('requestcode');
 
-        return view('my-requests/details-form/'.strtolower($requestcode));
+        return view('my-requests/details-form/'.$requestcode);
     }
 
     public function saveRequest(){
@@ -39,9 +39,11 @@ class MyRequests extends BaseController
       
         $countSummary = count($this->requestModel->get_all('tblrequest_summary'))+1;
         $reqsummary['documentnumber'] = date('Y').'-'.str_pad($countSummary, 4, '0', STR_PAD_LEFT);
-        $reqsummary['userid'] = $this->session->get('userid');
+
+        echo "<pre>";
+        var_dump($this->session->get('email'));
+        echo "</pre>";
     
-        var_dump($reqsummary);
     }
 
     // public function
