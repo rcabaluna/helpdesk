@@ -31,6 +31,7 @@
                             <h2>Subscription plans</h2>
                             <p class="w-45 m-h-auto m-b-30">Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face.</p>
                         </div>
+<<<<<<< HEAD
                         <div class="row align-items-center" id="monthly-view">
                             <div class="col-md-12">
                                 <div class="card">
@@ -46,6 +47,27 @@
                                         <ul class="list-unstyled m-v-30">
                                             <li class="m-b-20">
                                             <form id="frm-request">
+=======
+                        <div>
+                            <h1 class="text-white m-b-20 font-weight-normal">DOST 10 ICT Services</h1>
+                            <p class="text-white font-size-16 lh-2 w-80 opacity-08">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non facilis voluptates illo deleniti? Laboriosam omnis beatae quasi cumque, maxime culpa repellat tenetur, distinctio ipsa voluptate tempora eius sit earum.</p>
+                            <a href="<?=base_url('request');?>"><button class="btn btn-secondary btn-tone m-r-5 active">Create Request</button></a>
+                            <a href="<?=base_url('request/track');?>"><button class="btn btn-info btn-tone m-r-5">Track Request</button></a>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-white">© <?=date('Y')?> <a href="https://region10.dost.gov.ph/">DOST 10</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 bg-white">
+                    <div class="container h-100">
+                        <div class="row no-gutters h-100 align-items-center">
+                            <div class="col-md-8 col-lg-7 col-xl-10 mx-auto">
+                                <div id="main-frm-container">
+                                    <h2>STEP 1: Requester Contact Information</h2>
+                                    <p class="m-b-30">Please fill out the form below:</p>
+                                    <form id="frm-request">
+>>>>>>> ba60916d7c33b7c651a38c5644c4e964a7cb2a71
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
                                                 <label for="txtfname">Firstname <span class="text-danger">*</span></label>
