@@ -36,12 +36,11 @@ class MyRequests extends BaseController
 
     public function saveRequest(){
         $input = $this->request->getPost();
-      
-        $countSummary = count($this->requestModel->get_all('tblrequest_summary'))+1;
-        $reqsummary['documentnumber'] = date('Y').'-'.str_pad($countSummary, 4, '0', STR_PAD_LEFT);
+        // $countSummary = count($this->requestModel->get_all('tblrequest_summary'))+1;
+        // $reqsummary['documentnumber'] = date('Y').'-'.str_pad($countSummary, 4, '0', STR_PAD_LEFT);
 
         echo "<pre>";
-        var_dump($this->session->get('email'));
+        var_dump($this->session->get());
         echo "</pre>";
     
     }

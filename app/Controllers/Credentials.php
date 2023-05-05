@@ -27,6 +27,12 @@ class Credentials extends BaseController
     public function login()
     {
         $data['msgstatus'] = '';
+
+        return view('login',$data);
+    }
+
+    public function loginProcess(){
+        $data['msgstatus'] = '';
         if ($_POST) {
             $input = $this->request->getPost();
 
@@ -36,28 +42,21 @@ class Credentials extends BaseController
                 $verifyuser = password_verify($input['password'],$userdetails['password']);
                 if(!$verifyuser) {
                     $data['msgstatus'] = 'error';
+                    return view('login',$data);
                 }
                 else {
                     unset($userdetails['password']);
-
-                    $newdata = [
-                        'username'  => 'johndoe',
-                        'email'     => 'johndoe@some-site.com',
-                        'logged_in' => TRUE
-                    ];
-                    $this->session->set($newdata);
-
-                    var_dump($this->session->get());
-                    exit();
+                    $this->session->set($userdetails);
 
                     return redirect()->to(base_url('my-requests/list')); 
                 }
             }else{
                 $data['msgstatus'] = 'error';
+                return view('login',$data);
+
             }
         }
         
-        return view('login',$data);
     }
 
     public function register()
@@ -65,5 +64,9 @@ class Credentials extends BaseController
         $data['division'] = $this->credentialsModel->get_all('tbldivision');
         $data['location'] = $this->credentialsModel->get_all('tbllocation');
         return view('register',$data);
+    }
+
+    public function logout(){
+        return redirect()->to(base_url()); 
     }
 }

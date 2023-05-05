@@ -27,13 +27,13 @@
                                 <div class="card-body">
                                     
                                     <div class="d-flex align-items-center justify-content-between m-b-30">
-                                        <img class="img-fluid" alt="" src="<?=base_url('assets/images/logo/logox.png'); ?>">
+                                        <img class="img-fluid" alt="" src="<?=base_url('assets/images/logo/logo.png'); ?>">
                                         <h2 class="m-b-0">Login</h2>
                                     </div>
                                     <?php if($msgstatus == 'error') { ?>
                                         <div class="alert alert-danger">Incorrect username or password.</div>
                                     <?php } ?>
-                                    <form method="POST" action="<?=base_url('login');?>">
+                                    <form method="POST" action="<?=base_url('credentials/loginProcess');?>">
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="userName">Username:</label>
                                             <div class="input-affix">
