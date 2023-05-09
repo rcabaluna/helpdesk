@@ -32,7 +32,7 @@
             <li class="nav-item dropdown <?=$xa?>">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="anticon anticon-appstore"></i>
+                        <i class="anticon anticon-tags"></i>
                     </span>
                     <span class="title">My Requests</span>
                     <span class="arrow">
@@ -51,7 +51,7 @@
             <li class="nav-item dropdown <?=$xb?>">
                 <a class="dropdown-toggle" href="<?=base_url('users')?>">
                     <span class="icon-holder">
-                        <i class="anticon anticon-user"></i>
+                        <i class="anticon anticon-team"></i>
                     </span>
                     <span class="title">Users</span>
                 </a>
@@ -60,5 +60,3 @@
     </div>
 </div>
 <!-- Side Nav END -->
-
-         

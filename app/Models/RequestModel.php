@@ -22,6 +22,17 @@ class RequestModel extends Model
         return $builder->getResultArray();
     }
 
+    public function get_my_requests(){
+        $builder = $this->db->table('tblrequest_summary a');
+        $builder->join('tblrequest_types b', 'b.requestcode = a.requestcode', 'left');
+        $builder->join('tblrequest_category c', 'c.name = b.requestcategory', 'left');
+        $builder->where(array('a.requestedby' => session()->get('userid')));
+        $builder->orderBy('date_created','DESC');
+        $builder = $builder->get();
+
+        return $builder->getResultArray();
+    }
+
 
     public function get_single_data_where($tablename,$param){
         $builder = $this->db->table($tablename);
@@ -55,7 +66,7 @@ class RequestModel extends Model
                 
                 $last_inserted_id = $this->db->insertID();        
             $this->db->transComplete();
-                return $last_inserted_id;
+                return "SUCCESS";
 
         } catch (\Exception $e) {
             $this->db->transRollback();

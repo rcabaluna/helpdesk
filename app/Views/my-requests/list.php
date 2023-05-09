@@ -47,55 +47,48 @@
                 <table class="table table-hover e-commerce-table">
                     <thead>
                         <tr>
-                            <th>
-                                <div class="checkbox">
-                                    <input id="checkAll" type="checkbox">
-                                    <label for="checkAll" class="m-b-0"></label>
-                                </div>
-                            </th>
-                            <th>ID</th>
-                            <th>Product</th>
+                            <th>No</th>
+                            <th>Docnumber</th>
                             <th>Category</th>
-                            <th>Price</th>
-                            <th>Stock Left</th>
+                            <th>Type</th>
                             <th>Status</th>
+                            <th>Date Created</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                <div class="checkbox">
-                                    <input id="check-item-1" type="checkbox">
-                                    <label for="check-item-1" class="m-b-0"></label>
-                                </div>
-                            </td>
-                            <td>
-                                #31
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <h6 class="m-b-0 m-l-10">Gray Sofa</h6>
-                                </div>
-                            </td>
-                            <td>Home Decoration</td>
-                            <td>$912.00</td>
-                            <td>20</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="badge badge-success badge-dot m-r-10"></div>
-                                    <div>In Stock</div>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                    <i class="anticon anticon-edit"></i>
-                                </button>
-                                <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                    <i class="anticon anticon-delete"></i>
-                                </button>
-                            </td>
-                        </tr>
+                        <?php foreach ($myrequests as $myrequestsRow) { ?>
+                            <tr>
+                                <td>
+                                    #31
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="m-b-0 m-l-10">Gray Sofa</h6>
+                                    </div>
+                                </td>
+                                <td>Home Decoration</td>
+                                <td>$912.00</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="badge badge-success badge-dot m-r-10"></div>
+                                        <div>In Stock</div>
+                                    </div>
+                                </td>
+                                <td><?=date('F d, Y H:i:s',strtotime($myrequestsRow['date_created']))?></td>
+                                <td class="text-right">
+                                    <button class="btn btn-tone btn-info btn-icon btn-hover btn-sm btn-rounded pull-right">
+                                        <i class="anticon anticon-eye"></i>
+                                    </button>
+                                    <button class="btn btn-tone btn-icon btn-primary btn-hover btn-sm btn-rounded pull-right">
+                                        <i class="anticon anticon-edit"></i>
+                                    </button>
+                                    <button class="btn btn-tone btn-danger btn-icon btn-hover btn-sm btn-rounded">
+                                        <i class="anticon anticon-delete"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>

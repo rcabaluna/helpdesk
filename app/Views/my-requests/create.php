@@ -17,7 +17,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label>Category <span class="text-danger">*</span></label>
-                        <select id="selreqcategory" class="form-control" onchange="show_request_types()" required>
+                        <select id="selreqcategory" name="requestcategory" class="form-control" onchange="show_request_types()" required>
                             <option></option>
                             <?php foreach ($reqcategory as $reqcategoryRow) { ?>
                                 <option value="<?=$reqcategoryRow['name']?>"><?=$reqcategoryRow['name']?></option>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label>Type <span class="text-danger">*</span></label>
-                        <select id="selreqtype" onchange="get_form()" class="form-control" required>
+                        <select id="selreqtype" name="requestcode" onchange="get_form()" class="form-control" required>
                             
                         </select>
                     </div>
@@ -82,6 +82,54 @@
         }
     }
 
+    $("#frm-request").submit(function (e) { 
+        var description = reqdetails = strcontainer = '';
+        var cntr = 1;
+
+        switch ($("#selreqtype").val()) {
+            case "NAMETAG":
+            case "EMLCREA":
+            case "EMLSIG": 
+            case "ICTSETUP":
+            case "PVCID":
+                reqdetails = $("#frm-request").serialize();
+                break;
+            case "OTHERS":
+            case "GRPHDES":
+                description = $(".ql-editor").html();            
+                break;
+            case "ICTREP":
+            case "TECHSUPP": 
+                reqdetails = $("#frm-request").serialize();
+                description = $(".ql-editor").html();            
+                break;
+            case 'CONRM':
+                $('input[name="confictrequested"]:checked').each(function() {
+                    strcontainer += this.value;
+                    if (cntr < $('input[name="confictrequested"]:checked').length) {
+                        strcontainer += ", ";
+                        cntr++;
+                    }
+                });
+                reqdetails = "confictrequested="+strcontainer;
+            break;
+            default:
+                break;
+        }
+
+        $.post(BASE_URL + "myrequests/saveRequest", {
+            reqdetails: reqdetails,
+            description: description
+        }, function(data) {
+            if (data == "SUCCESS") {
+                console.log(data);
+            }else{
+                alert(data);
+            }
+        })
+        e.preventDefault();
+
+        });
 </script>
 
 <?= $this->endSection() ?>
