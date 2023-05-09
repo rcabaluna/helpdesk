@@ -174,7 +174,6 @@
     <script src="<?=base_url('assets/vendors/quill/quill.min.js'); ?>"></script>
     <!-- Core JS -->
     <script src="<?=base_url('assets/js/app.min.js'); ?>"></script>
-
 </body>
 
 </html>

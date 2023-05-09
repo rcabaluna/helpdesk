@@ -41,22 +41,20 @@ class Credentials extends BaseController
             $userdetails = $this->credentialsModel->get_single_data_where('tblusers',array('username' => $input['username']));
 
 
-            if ($userdetails) {
+            if ($userdetails['is_active'] == 1) {
                 $verifyuser = password_verify($input['password'],$userdetails['password']);
-
-                if(!$verifyuser) {
-                    //if incorrect password
-                    echo "ERROR";
-                    exit();
-                }
-                else {
-                    
+                if($verifyuser) {
                     unset($userdetails['password']);
                     $userdetails['logged_in'] = true;
 
                     $this->session->set($userdetails);
 
                     echo "SUCCESS";
+                }
+                else {
+                     //if incorrect password
+                    echo "ERROR";
+                    exit();
                 }
             }else{
                 //if account not found

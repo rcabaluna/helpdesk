@@ -41,17 +41,25 @@ class Users extends BaseController
         $param['userid'] = $userdata['userid'];
         unset($userdata['userid']);
 
-        
-        
+        if (!array_key_exists('is_active',$userdata)) {
+            $userdata['is_active'] = 0;
+        }
+
+        if ($userdata['password']) {
+            $userdata['password'] = password_hash($userdata['password'],PASSWORD_DEFAULT);
+        }else{
+            unset($userdata['password']);
+        }
+
         $updateuser = $this->usersModel->update_data('tblusers',$userdata,$param);
 
+        $this->session->setFlashdata('okstatus', 'true');
         echo $updateuser;
     }
 
     public function getUnits()
     {
         $division = $this->request->getPost('divisionid');
-
         $data['unit'] = $this->usersModel->get_all_where('tblunit',array('divisioncode'=>$division));
 
         return view('users/get-units',$data);   

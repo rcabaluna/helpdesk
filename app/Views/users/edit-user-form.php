@@ -84,6 +84,24 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="txtfname">Change Password</label>
+            <input type="password" class="form-control" id="txtpassword" name="password">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="txtfname">Confirm Password</label>
+            <input type="password" class="form-control">
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <div class="switch m-r-10">
+            <input type="checkbox" name="is_active" id="isactive" onchange="set_status()">
+            <label for="isactive"></label>
+        </div>
+        <label id="isactivelabel">Active</label>
+    </div>
     <div class="form-group text-right">
         <button type="submit" class="btn btn-primary">Update</button>
     </div>
@@ -100,6 +118,14 @@
             function() {
                 $("#selunit").val('<?=$userdetails['unitid']?>');
             }, 100);
+        }
+
+        if ('<?=$userdetails['is_active']?>' == 1) {
+            $("#isactive").attr("checked", true);
+            $("#isactivelabel").html("Active");
+
+        }else{
+            $("#isactivelabel").html("Inactive");
         }
     });
 
@@ -131,11 +157,21 @@
         $.post(BASE_URL+"users/updateUser",{
             userdata : $("#frm-edit-user").serialize() 
         },function(data){
+            console.log(data);
             if (data == "SUCCESS") {
                 $("#edit-user-mdl").modal("hide");
+                window.location.replace(BASE_URL+'users');
             }
         });
         e.preventDefault();
-        
     });
+
+    function set_status(){
+        if ($("#isactive").is(':checked')) {
+            $("#isactive").val(1);
+            $("#isactivelabel").html("Active");
+        }else{
+            $("#isactivelabel").html("Inactive");
+        }
+    }
 </script>

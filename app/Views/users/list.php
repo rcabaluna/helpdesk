@@ -7,14 +7,17 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <div class="alert alert-success">
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="alert-icon">
-                        <i class="anticon anticon-check-o"></i>
-                    </span>
-                    <span>The user has been updated successfully!</span>
+            <?php if (session()->get('okstatus')) { ?>
+                <div class="alert alert-success" id="msgstatus">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <span class="alert-icon">
+                            <i class="anticon anticon-check-o"></i>
+                        </span>
+                        <span>The user has been updated successfully!</span>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
+            
             <div class="table-responsive">
                 <table class="table table-hover e-commerce-table">
                     <thead>
@@ -74,10 +77,10 @@
                                     </div>
                                 </td>
                                 <td class="text-right">
-                                    <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right" onclick="edit_user(<?=$usersRow['userid']?>)">
+                                    <button class="btn btn-icon btn-tone btn-hover btn-info btn-sm btn-rounded pull-right" onclick="edit_user(<?=$usersRow['userid']?>)">
                                         <i class="anticon anticon-edit"></i>
                                     </button>
-                                    <button class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                    <button class="btn btn-icon btn-hover btn-tone btn-sm btn-danger btn-rounded" disabled>
                                         <i class="anticon anticon-delete"></i>
                                     </button>
                                 </td>
@@ -87,11 +90,11 @@
                         ?>
                     </tbody>
                 </table>
-                <div class="modal fade bd-example-modal-lg" id="edit-user-mdl">
+                <div class="modal fade bd-example-modal-lg" id="edit-user-mdl" data-backdrop="static" and data-keyboard="false">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title h4">Large modal</h5>
+                                <h5 class="modal-title h4">Edit User</h5>
                                 <button type="button" class="close" data-dismiss="modal">
                                     <i class="anticon anticon-close"></i>
                                 </button>
@@ -108,6 +111,12 @@
 </div>
 
 <script>
+    $(document).ready(function () {
+        setTimeout(
+            function() {
+                $("#msgstatus").fadeOut();
+            }, 3000);
+    });
     function edit_user(x) {
         $.post(BASE_URL+"users/editUser",{
             userid : x
@@ -117,6 +126,7 @@
         });
         
     }
+
 </script>
 <!-- Content Wrapper END -->
 <?= $this->endSection() ?>
