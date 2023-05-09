@@ -1,0 +1,659 @@
+INFO - 2023-05-09 00:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:29:48 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(41): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:29:48 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `userid` = \'109\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `userid` = \'109\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `userid` = \'109\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `userid` = :userid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid.1:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(41): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:31:14 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(43): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:31:14 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `userid` = \'109\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `userid` = \'109\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `userid` = \'109\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `userid` = :userid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid.1:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(43): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:31:47 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:32:00 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:32:14 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:32:21 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:32:22 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:32:34 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:32:34 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:32:40 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:33:10 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:33:10 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:33:10 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Users.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:34:46 --> Undefined array key "userid"
+in APPPATH\Controllers\Users.php on line 45.
+ 1 APPPATH\Controllers\Users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userid"', 'C:\\xampp\\htdocs\\helpdesk\\app\\Controllers\\Users.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:34:48 --> Undefined array key "userid"
+in APPPATH\Controllers\Users.php on line 45.
+ 1 APPPATH\Controllers\Users.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userid"', 'C:\\xampp\\htdocs\\helpdesk\\app\\Controllers\\Users.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:34:56 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:34:56 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:34:57 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:34:57 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:35:19 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:35:19 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:35:22 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:35:22 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(45): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:35:27 --> Undefined array key "userdata"
+in APPPATH\Controllers\Users.php on line 40.
+ 1 APPPATH\Controllers\Users.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'C:\\xampp\\htdocs\\helpdesk\\app\\Controllers\\Users.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:35:51 --> Undefined array key "userdata"
+in APPPATH\Controllers\Users.php on line 41.
+ 1 APPPATH\Controllers\Users.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'C:\\xampp\\htdocs\\helpdesk\\app\\Controllers\\Users.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:36:02 --> Undefined array key "userdata"
+in APPPATH\Controllers\Users.php on line 40.
+ 1 APPPATH\Controllers\Users.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'C:\\xampp\\htdocs\\helpdesk\\app\\Controllers\\Users.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:36:11 --> Undefined array key "userdata"
+in APPPATH\Controllers\Users.php on line 40.
+ 1 APPPATH\Controllers\Users.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'C:\\xampp\\htdocs\\helpdesk\\app\\Controllers\\Users.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:36:32 --> Undefined array key "userdata"
+in APPPATH\Controllers\Users.php on line 40.
+ 1 APPPATH\Controllers\Users.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'C:\\xampp\\htdocs\\helpdesk\\app\\Controllers\\Users.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:37:38 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:37:38 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'GDA0529\', `firstname` = \'\', `middlename` = \'\', `lastname` = \'\', `suffix` = \'\', `email` = \'\', `mobileno` = \'\', `position` = \'\', `divisioncode` = \'\', `locationcode` = \'\', `unitid` = \'\'
+WHERE `userid` = \'109\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:49:25 --> Invalid file: "request/get-units.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('request/get-units.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('request/get-units', [], true)
+ 3 APPPATH\Controllers\Users.php(56): view('request/get-units', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->getUnits()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:49:31 --> Invalid file: "request/get-units.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('request/get-units.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('request/get-units', [], true)
+ 3 APPPATH\Controllers\Users.php(56): view('request/get-units', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->getUnits()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 00:49:56 --> Invalid file: "request/get-units.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('request/get-units.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('request/get-units', [], true)
+ 3 APPPATH\Controllers\Users.php(57): view('request/get-units', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->getUnits()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:52:36 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:52:36 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:53:12 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:53:12 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:53:12 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:53:12 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:53:47 --> mysqli_sql_exception: Unknown column 'mobileno' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:53:47 --> Unknown column 'mobileno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 00:54:21 --> mysqli_sql_exception: Unknown column 'divisioncode' in 'field list' in C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\helpdesk\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tbluser...', 0)
+#1 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbluser...')
+#2 C:\xampp\htdocs\helpdesk\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbluser...')
+#3 C:\xampp\htdocs\helpdesk\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbluser...', Array, false)
+#4 C:\xampp\htdocs\helpdesk\app\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\helpdesk\app\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', Array, Array)
+#6 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+#7 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\xampp\htdocs\helpdesk\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\helpdesk\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 00:54:21 --> Unknown column 'divisioncode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tblusers` SET `employeeid` = \'ROCJ1010\', `firstname` = \'Ruel\', `middlename` = \'Ogao-ogao\', `lastname` = \'Cabaluna\', `suffix` = \'Jr\', `email` = \'rocabalunajr@region10.dost.gov.ph\', `mobileno` = \'09453182617\', `position` = \'Project Technical Assistant II\', `divisioncode` = \'TSD\', `locationcode` = \'RO\', `unitid` = \'17\'
+WHERE `userid` = \'68\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tblusers` SET `employeeid` = :employeeid:, `firstname` = :firstname:, `middlename` = :middlename:, `lastname` = :lastname:, `suffix` = :suffix:, `email` = :email:, `mobileno` = :mobileno:, `position` = :position:, `divisioncode` = :divisioncode:, `locationcode` = :locationcode:, `unitid` = :unitid:
+WHERE `userid` = :userid:', [...], false)
+ 5 APPPATH\Models\UsersModel.php(46): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\Users.php(46): App\Models\UsersModel->update_data('tblusers', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Users->updateUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-09 00:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 00:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 01:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

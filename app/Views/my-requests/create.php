@@ -15,13 +15,19 @@
         <div class="card-body">
             <form id="frm-request" method="POST" action="<?=base_url('myrequests/saveRequest'); ?>">
                 <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="txtfname">ICT Service <span class="text-danger">*</span></label>
-                        <select name="requestcode" id="selreqtype" onchange="get_form()" class="form-control" required>
+                    <div class="form-group col-md-6">
+                        <label>Category <span class="text-danger">*</span></label>
+                        <select id="selreqcategory" class="form-control" onchange="show_request_types()" required>
                             <option></option>
-                            <?php foreach ($reqtypes as $reqtypesRow) { ?>
-                                <option value="<?=$reqtypesRow['requestcode']?>"><?=$reqtypesRow['name']?></option>
+                            <?php foreach ($reqcategory as $reqcategoryRow) { ?>
+                                <option value="<?=$reqcategoryRow['name']?>"><?=$reqcategoryRow['name']?></option>
                             <?php } ?>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Type <span class="text-danger">*</span></label>
+                        <select id="selreqtype" onchange="get_form()" class="form-control" required>
+                            
                         </select>
                     </div>
                 </div>
@@ -43,7 +49,26 @@
         });
     });
 
+    function show_request_types(){
+        var selreqcategory = $("#selreqcategory").val();
+
+        if (!selreqcategory) {
+            $("#req-frm-details-container").empty();
+            $("#selreqtype").empty();
+        }else{
+            $("#req-frm-details-container").empty();
+
+            $.post(BASE_URL + "myrequests/generateRequestType", {
+                selreqcategory: selreqcategory
+            }, function(data) {
+                $("#selreqtype").html(data);
+            })
+        }
+    }
+
     function get_form(){
+        $("#req-frm-details-container").empty();
+
         var requestcode = $("#selreqtype").val();
 
         if (!requestcode) {

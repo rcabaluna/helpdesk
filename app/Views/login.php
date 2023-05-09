@@ -13,6 +13,10 @@
 
     <!-- Core css -->
     <link href="<?=base_url('assets/css/app.min.css'); ?>" rel="stylesheet">
+    <script>
+        var BASE_URL = '<?=base_url('');?>';
+    </script>
+
 
 </head>
 
@@ -30,15 +34,13 @@
                                         <img class="img-fluid" alt="" src="<?=base_url('assets/images/logo/logo.png'); ?>">
                                         <h2 class="m-b-0">Login</h2>
                                     </div>
-                                    <?php if($msgstatus == 'error') { ?>
-                                        <div class="alert alert-danger">Incorrect username or password.</div>
-                                    <?php } ?>
-                                    <form method="POST" action="<?=base_url('credentials/loginProcess');?>">
+                                        <div class="alert alert-danger" id="error-msg" style="display:none;">Incorrect username or password.</div>
+                                    <form id="login-frm">
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="userName">Username:</label>
                                             <div class="input-affix">
                                                 <i class="prefix-icon anticon anticon-user"></i>
-                                                <input type="text" class="form-control" id="userName" name="username" placeholder="Username">
+                                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -79,6 +81,24 @@
     <!-- Core JS -->
     <script src="<?=base_url('assets/js/app.min.js'); ?>"></script>
 
+    <script>
+        $("#login-frm").submit(function (e) { 
+            $.post(BASE_URL+"credentials/loginProcess",{
+                username : $("#username").val(),
+                password : $("#password").val()
+            },function(data){
+                if (data == "SUCCESS") {
+                    window.location.replace(BASE_URL);
+                }
+                else {
+                    $("#error-msg").css("display", "block");
+                    console.log(data);
+                }
+            });
+            e.preventDefault();
+            
+        });
+    </script>
 </body>
 
 </html>

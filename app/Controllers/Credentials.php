@@ -9,53 +9,60 @@ class Credentials extends BaseController
 
     private $credentialsModel;
 
-    public function __construct()
-    {
+    public function __construct(){
         $this->credentialsModel = new CredentialsModel();
 
         parent::__construct();
     }
 
 
-    public function index()
-    {
-        $data['msgstatus'] = '';
+    public function index(){
 
-        return view('login',$data);
+        if ($this->session->get('logged_in') == TRUE ) {
+            return redirect()->to(base_url('my-requests/list')); 
+        }else{
+            return view('login');
+        }
+
     }
 
-    public function login()
-    {
-        $data['msgstatus'] = '';
-
-        return view('login',$data);
+    public function login(){
+        return view('login');
     }
 
     public function loginProcess(){
-        $data['msgstatus'] = '';
-        if ($_POST) {
-            $input = $this->request->getPost();
+
+        $input = array(  'username' => $this->request->getPost('username'),
+                        'password' => $this->request->getPost('password')                
+                );
+
+               
 
             $userdetails = $this->credentialsModel->get_single_data_where('tblusers',array('username' => $input['username']));
 
+
             if ($userdetails) {
                 $verifyuser = password_verify($input['password'],$userdetails['password']);
+
                 if(!$verifyuser) {
-                    $data['msgstatus'] = 'error';
-                    return view('login',$data);
+                    //if incorrect password
+                    echo "ERROR";
+                    exit();
                 }
                 else {
+                    
                     unset($userdetails['password']);
+                    $userdetails['logged_in'] = true;
+
                     $this->session->set($userdetails);
 
-                    return redirect()->to(base_url('my-requests/list')); 
+                    echo "SUCCESS";
                 }
             }else{
-                $data['msgstatus'] = 'error';
-                return view('login',$data);
-
+                //if account not found
+                echo "ERROR";
+                exit();
             }
-        }
         
     }
 
@@ -67,6 +74,7 @@ class Credentials extends BaseController
     }
 
     public function logout(){
+        $this->session->destroy();
         return redirect()->to(base_url()); 
     }
 }

@@ -19,11 +19,14 @@ class MyRequests extends BaseController
 
     public function list()
     {
-        return view('my-requests/list');
+        $data['reqcategory'] = $this->requestModel->get_all('tblrequest_category');
+        return view('my-requests/list',$data);
     }
 
     public function create(){
+        $data['reqcategory'] = $this->requestModel->get_all('tblrequest_category');
         $data['reqtypes'] = $this->requestModel->get_all('tblrequest_types');
+
 
         return view('my-requests/create', $data);
     }
@@ -43,6 +46,12 @@ class MyRequests extends BaseController
         var_dump($this->session->get());
         echo "</pre>";
     
+    }
+
+    public function generateRequestType(){
+        $data['reqtypes'] = $this->requestModel->get_all_where('tblrequest_types',array('requestcategory'=>$this->request->getPost('selreqcategory')));
+        
+        return view('my-requests/request-types',$data);
     }
 
     // public function

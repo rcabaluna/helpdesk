@@ -60,7 +60,6 @@ class RequestModel extends Model
         } catch (\Exception $e) {
             $this->db->transRollback();
             die($e->getMessage());
-        }
-        
+        }   
     }
 }

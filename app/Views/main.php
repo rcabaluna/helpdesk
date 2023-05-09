@@ -93,11 +93,24 @@
                             <div class="p-b-15 p-t-20 dropdown-menu pop-profile">
                                 <div class="p-h-20 p-b-15 m-b-10 border-bottom">
                                     <div class="d-flex m-r-50">
-                                        <div class="avatar avatar-lg avatar-image">
-                                            <img src="<?=base_url('assets/images/others/thumb-3.jpg'); ?>" alt="">
-                                        </div>
                                         <div class="m-l-10">
-                                            <p class="m-b-0 text-dark font-weight-semibold">Marshall Nichols</p>
+                                            <p class="m-b-0 text-dark font-weight-semibold">
+                                                <?php
+
+                                                    $name = session()->firstname." ";
+                                                    $middlename = session()->middlename;
+                                                    $suffix = session()->suffix;
+
+                                                    if ($middlename) {
+                                                        $name .= substr($middlename, 0, 1)." ";
+                                                    }
+                                                    $name.= session()->lastname;
+                                                    if ($suffix) {
+                                                        $name .= " ".$suffix;
+                                                    }
+                                                    echo $name;
+                                                ?>
+                                            </p>
                                             <p class="m-b-0 opacity-07">UI/UX Desinger</p>
                                         </div>
                                     </div>

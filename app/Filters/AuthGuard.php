@@ -11,7 +11,7 @@ class AuthGuard implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (!session()->get('logged_in')){
+        if (!session()->get('logged_in') && session()->get('is_active') == 0){
             header('Location: '.base_url('login'));
             exit;
         }
