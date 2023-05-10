@@ -70,19 +70,19 @@
                             </td>
                             <td>
                                 <?php
-                                        $name = $requestsRow['firstname']." ";
-                                        $middlename = $requestsRow['middlename'];
-                                        $suffix = $requestsRow['suffix'];
+                                    $name = $requestsRow['firstname']." ";
+                                    $middlename = $requestsRow['middlename'];
+                                    $suffix = $requestsRow['suffix'];
 
-                                        if ($middlename) {
-                                            $name .= substr($middlename, 0, 1).". ";
-                                        }
-                                        $name.= $requestsRow['lastname'];
-                                        if ($suffix) {
-                                            $name .= " ".$suffix;
-                                        }
-                                        echo $name;
-                                        ?>
+                                    if ($middlename) {
+                                        $name .= substr($middlename, 0, 1).". ";
+                                    }
+                                    $name.= $requestsRow['lastname'];
+                                    if ($suffix) {
+                                        $name .= " ".$suffix;
+                                    }
+                                    echo $name;
+                                ?>
                             </td>
                             <td><?=$requestsRow['reqcatname'];?></td>
                             <td><?=$requestsRow['reqtypename'];?></td>
@@ -112,10 +112,10 @@
             </div>
             <!--  data-backdrop="static" and data-keyboard="false" -->
             <div class="modal fade bd-example-modal-lg" id="request-details-mdl">
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title h4">Request Details</h5>
+                            <h5 class="modal-title h4">Request Information</h5>
                             <button type="button" class="close" data-dismiss="modal">
                                 <i class="anticon anticon-close"></i>
                             </button>
@@ -135,7 +135,6 @@
                 reqsummaryid: reqsummaryid,
             },
             function (data) {
-                console.log(data);
                 $("#request-details-mdl-body").html(data);
                 $("#request-details-mdl").modal("show");
             }

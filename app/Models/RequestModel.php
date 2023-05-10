@@ -102,7 +102,9 @@ class RequestModel extends Model
     }
 
     public function get_request_details($param){
-        $builder = $this->db->table('tblrequest_details');
+        $builder = $this->db->table('tblrequest_details a');
+        $builder->select('a.*,b.name as xlocation');
+        $builder->join('tbllocation b', 'b.locationcode = a.locationcode', 'left');
         $builder->where($param);
         $builder = $builder->get();
 

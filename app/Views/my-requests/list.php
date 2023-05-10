@@ -13,6 +13,16 @@
     </div>
     <div class="card">
         <div class="card-body">
+            <?php if (session()->get('okstatus')) { ?>
+                <div class="alert alert-success" id="msgstatus">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <span class="alert-icon">
+                            <i class="anticon anticon-check-o"></i>
+                        </span>
+                        <span>Your request has been sent successfully! You'll receive an email when your request has been acknowledged.</span>
+                    </div>
+                </div>
+            <?php } ?>
             <div class="row m-b-30">
                 <div class="col-lg-8">
                     <div class="d-md-flex">
@@ -97,5 +107,14 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(
+            function() {
+                $("#msgstatus").fadeOut();
+            }, 3000);
+    });
+</script>
 <!-- Content Wrapper END -->
                 <?= $this->endSection() ?>

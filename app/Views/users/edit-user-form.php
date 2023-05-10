@@ -157,7 +157,6 @@
         $.post(BASE_URL+"users/updateUser",{
             userdata : $("#frm-edit-user").serialize() 
         },function(data){
-            console.log(data);
             if (data == "SUCCESS") {
                 $("#edit-user-mdl").modal("hide");
                 window.location.replace(BASE_URL+'users');

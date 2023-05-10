@@ -71,7 +71,8 @@ class MyRequests extends BaseController
         $reqdetails['reqsummaryid'] = $insertsummary;
 
         $insertdetails = $this->requestModel->save_request_details('tblrequest_details',$reqdetails);
-
+        
+        $this->session->setFlashdata('okstatus', 'true');
         echo "SUCCESS";
     }
 

@@ -86,7 +86,7 @@
                         </li>
                         <li class="dropdown dropdown-animated scale-left">
                             <div class="pointer" data-toggle="dropdown">
-                                <div class="avatar avatar-icon">
+                                <div class="avatar avatar-icon avatar-blue">
                                     <i class="anticon anticon-user"></i>
                                 </div>
                             </div>

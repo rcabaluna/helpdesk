@@ -92,7 +92,6 @@
                 }
                 else {
                     $("#error-msg").css("display", "block");
-                    console.log(data);
                 }
             });
             e.preventDefault();

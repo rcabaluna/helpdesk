@@ -37,6 +37,10 @@ $routes->get('/register', 'Credentials::register');
 $routes->get('my-requests/list', 'MyRequests::list',['filter' => 'authGuard']);
 $routes->match(['get', 'post'],'my-requests/create', 'MyRequests::create',['filter' => 'authGuard']);
 
+$routes->get('/requests', 'Requests::index',['filter' => 'authGuard']);
+$routes->get('/users', 'Users::index',['filter' => 'authGuard']);
+
+
 
 
 

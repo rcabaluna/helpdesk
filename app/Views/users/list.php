@@ -17,7 +17,6 @@
                     </div>
                 </div>
             <?php } ?>
-            
             <div class="table-responsive">
                 <table class="table table-hover e-commerce-table">
                     <thead>

@@ -122,7 +122,7 @@
             description: description
         }, function(data) {
             if (data == "SUCCESS") {
-                console.log(data);
+                window.location.replace(BASE_URL+"my-requests/list");
             }else{
                 alert(data);
             }
