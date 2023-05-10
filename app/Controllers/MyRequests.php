@@ -20,7 +20,6 @@ class MyRequests extends BaseController
     public function list()
     {
         $data['reqcategory'] = $this->requestModel->get_all('tblrequest_category');
-        $data['reqcategory'] = $this->requestModel->get_all('tblrequest_category');
         $data['myrequests'] = $this->requestModel->get_my_requests();
 
         return view('my-requests/list',$data);

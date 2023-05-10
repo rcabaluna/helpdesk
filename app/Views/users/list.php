@@ -124,7 +124,6 @@
             $("#edit-user-mdl-body").html(data);
             $("#edit-user-mdl").modal("show");
         });
-        
     }
 
 </script>

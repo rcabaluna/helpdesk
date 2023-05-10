@@ -27,9 +27,10 @@
                         <div class="m-b-10">
                             <select class="custom-select" style="min-width: 180px;">
                                 <option selected>Status</option>
-                                <option value="all">All</option>
-                                <option value="inStock">In Stock </option>
-                                <option value="outOfStock">Out of Stock</option>
+                                <option value="all">Open</option>
+                                <option value="inStock">Acknowledged</option>
+                                <option value="outOfStock">Resolved</option>
+                                <option value="outOfStock">Closed</option>
                             </select>
                         </div>
                     </div>
@@ -57,25 +58,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($myrequests as $myrequestsRow) { ?>
+                        <?php 
+                            $counter = 0;
+                            foreach ($myrequests as $myrequestsRow) { ?>
                             <tr>
-                                <td>
-                                    #31
-                                </td>
+                                <td><?=$counter+=1;?></td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <h6 class="m-b-0 m-l-10">Gray Sofa</h6>
+                                        <h6 class="m-b-0 m-l-10"><?=$myrequestsRow['documentnumber'];?></h6>
                                     </div>
                                 </td>
-                                <td>Home Decoration</td>
-                                <td>$912.00</td>
+                                <td><?=$myrequestsRow['reqcatname'];?></td>
+                                <td><?=$myrequestsRow['reqtypename'];?></td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <div class="badge badge-success badge-dot m-r-10"></div>
-                                        <div>In Stock</div>
+                                        <div class="badge badge-info badge-dot m-r-10"></div>
+                                        <div><?=$myrequestsRow['xstatus'];?></div>
                                     </div>
                                 </td>
-                                <td><?=date('F d, Y H:i:s',strtotime($myrequestsRow['date_created']))?></td>
+                                <td><?=date('F d, Y',strtotime($myrequestsRow['date_created']))?>
+                                    <small><?=date('h:i A',strtotime($myrequestsRow['date_created']))?></small></td>
                                 <td class="text-right">
                                     <button class="btn btn-tone btn-info btn-icon btn-hover btn-sm btn-rounded pull-right">
                                         <i class="anticon anticon-eye"></i>

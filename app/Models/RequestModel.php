@@ -14,6 +14,18 @@ class RequestModel extends Model
         return $builder->getResultArray();
     }
 
+    public function get_all_requests(){
+        $builder = $this->db->table('tblrequest_summary a');
+        $builder->select('a.*,b.name as reqtypename, c.name as reqcatname,d.*');
+        $builder->join('tblrequest_types b', 'b.requestcode = a.requestcode', 'left');
+        $builder->join('tblrequest_category c', 'c.name = b.requestcategory', 'left');
+        $builder->join('tblusers d', 'd.userid = a.requestedby', 'left');
+        $builder->orderBy('date_created','DESC');
+        $builder = $builder->get();
+
+        return $builder->getResultArray();
+    }
+
     public function get_all_where($tablename,$param){
         $builder = $this->db->table($tablename);
         $builder->where($param);
@@ -24,6 +36,7 @@ class RequestModel extends Model
 
     public function get_my_requests(){
         $builder = $this->db->table('tblrequest_summary a');
+        $builder->select('a.*,b.name as reqtypename, c.name as reqcatname');
         $builder->join('tblrequest_types b', 'b.requestcode = a.requestcode', 'left');
         $builder->join('tblrequest_category c', 'c.name = b.requestcategory', 'left');
         $builder->where(array('a.requestedby' => session()->get('userid')));
@@ -72,5 +85,27 @@ class RequestModel extends Model
             $this->db->transRollback();
             die($e->getMessage());
         }   
+    }
+
+    //REQUESTS
+
+    public function get_request_summary($param){
+        $builder = $this->db->table('tblrequest_summary a');
+        $builder->select('a.*,b.name as reqtypename, c.name as reqcatname,d.*');
+        $builder->join('tblrequest_types b', 'b.requestcode = a.requestcode', 'left');
+        $builder->join('tblrequest_category c', 'c.name = b.requestcategory', 'left');
+        $builder->join('tblusers d', 'd.userid = a.requestedby', 'left');
+        $builder->where($param);
+        $builder = $builder->get();
+
+        return $builder->getRowArray();
+    }
+
+    public function get_request_details($param){
+        $builder = $this->db->table('tblrequest_details');
+        $builder->where($param);
+        $builder = $builder->get();
+
+        return $builder->getRowArray();
     }
 }
