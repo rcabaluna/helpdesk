@@ -23,7 +23,6 @@ class Credentials extends BaseController
         }else{
             return view('login');
         }
-
     }
 
     public function login(){
@@ -36,10 +35,7 @@ class Credentials extends BaseController
                         'password' => $this->request->getPost('password')                
                 );
 
-               
-
             $userdetails = $this->credentialsModel->get_single_data_where('tblusers',array('username' => $input['username']));
-
 
             if ($userdetails['is_active'] == 1) {
                 $verifyuser = password_verify($input['password'],$userdetails['password']);
@@ -61,11 +57,9 @@ class Credentials extends BaseController
                 echo "ERROR";
                 exit();
             }
-        
     }
 
-    public function register()
-    {
+    public function register(){
         $data['division'] = $this->credentialsModel->get_all('tbldivision');
         $data['location'] = $this->credentialsModel->get_all('tbllocation');
         return view('register',$data);

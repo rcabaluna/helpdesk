@@ -96,7 +96,6 @@
                                         <div class="m-l-10">
                                             <p class="m-b-0 text-dark font-weight-semibold">
                                                 <?php
-
                                                     $name = session()->firstname." ";
                                                     $middlename = session()->middlename;
                                                     $suffix = session()->suffix;

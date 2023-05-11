@@ -9,16 +9,14 @@ class MyRequests extends BaseController
 {
     private $requestModel; 
 
-    public function __construct()
-    {
+    public function __construct(){
         $this->requestModel = new RequestModel();
 
         parent::__construct();
     }
 
 
-    public function list()
-    {
+    public function list(){
         $data['reqcategory'] = $this->requestModel->get_all('tblrequest_category');
         $data['myrequests'] = $this->requestModel->get_my_requests();
 
@@ -28,7 +26,6 @@ class MyRequests extends BaseController
     public function create(){
         $data['reqcategory'] = $this->requestModel->get_all('tblrequest_category');
         $data['reqtypes'] = $this->requestModel->get_all('tblrequest_types');
-
 
         return view('my-requests/create', $data);
     }
@@ -74,37 +71,5 @@ class MyRequests extends BaseController
         
         $this->session->setFlashdata('okstatus', 'true');
         echo "SUCCESS";
-    }
-
-    // public function
-
-    // public function test()
-    // {
-    //     return view('landing');
-    // }
-
-    // public function getUnits()
-    // {
-    //     $division = $this->request->getPost('divisionval');
-    //     $data['unit'] = $this->requestModel->get_all_where('tblunit',array('divisioncode'=>$division));
-
-    //     return view('request/get-units',$data);   
-    // }
-
-    // public function showStepTwo()
-    // {
-    //     $data['reqtypes'] = $this->requestModel->get_all('tblrequest_types');
-
-    //     return view('request/step-2',$data); 
-    // }    
-
-    // public function showStepThree()
-    // {   
-    //     $data['requesttype'] = $this->requestModel->get_single_data_where('tblrequest_types',array('requestcode' => $this->request->getPost('requesttype')));
-
-    //     return view('request/step-3',$data); 
-    // }    
-
-
-    
+    }    
 }

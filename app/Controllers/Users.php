@@ -8,16 +8,14 @@ class Users extends BaseController
 {
     private $usersModel;
 
-    public function __construct()
-    {
+    public function __construct(){
         $this->usersModel = new UsersModel();
 
         parent::__construct();
     }
 
 
-    public function index()
-    {
+    public function index(){
         $data['users'] = $this->usersModel->get_all_users('tblusers');
         
         return view('users/list', $data);
@@ -57,8 +55,7 @@ class Users extends BaseController
         echo $updateuser;
     }
 
-    public function getUnits()
-    {
+    public function getUnits(){
         $division = $this->request->getPost('divisionid');
         $data['unit'] = $this->usersModel->get_all_where('tblunit',array('divisioncode'=>$division));
 

@@ -10,14 +10,12 @@ class Requests extends BaseController
 {
     private $requestModel;
 
-    public function __construct()
-    {
+    public function __construct(){
         $this->requestModel = new RequestModel();
         parent::__construct();
     }
 
-    public function index()
-    {
+    public function index(){
         $data['division'] = $this->requestModel->get_all('tbldivision');
         $data['location'] = $this->requestModel->get_all('tbllocation');
         $data['reqcategory'] = $this->requestModel->get_all('tblrequest_category');
@@ -30,8 +28,7 @@ class Requests extends BaseController
         $input['reqsummaryid'] = $this->request->getPost('reqsummaryid');
         $data['reqsummary'] = $this->requestModel->get_request_summary($input);
         $data['reqdetails'] = $this->requestModel->get_request_details($input);
+        
         return view('requests/request-details.php',$data);
-
     }
-
 }
