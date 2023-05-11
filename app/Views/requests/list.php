@@ -13,36 +13,6 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <div class="row m-b-30">
-                <div class="col-lg-8">
-                    <div class="d-md-flex">
-                        <div class="m-b-10 m-r-15">
-                            <select class="custom-select" style="min-width: 180px;">
-                                <option value="all" selected>Category</option>
-                                <?php foreach ($reqcategory as $reqcategoryRow) { ?>
-                                <option
-                                    value="
-									<?=$reqcategoryRow['name']?>"
-                                >
-                                    <?=$reqcategoryRow['name']?>
-                                </option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                        <div class="m-b-10">
-                            <select class="custom-select" style="min-width: 180px;">
-                                <option selected>Status</option>
-                                <option value="all">Open</option>
-                                <option value="inStock">Acknowledged</option>
-                                <option value="outOfStock">Resolved</option>
-                                <option value="outOfStock">Closed</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-right">
-                </div>
-            </div>
             <div class="table-responsive">
                 <table class="table table-hover e-commerce-table">
                     <thead>
@@ -88,7 +58,7 @@
                             <td><?=$requestsRow['reqtypename'];?></td>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <div class="badge badge-info badge-dot m-r-10"></div>
+                                    <div class="badge badge-primary badge-dot m-r-10"></div>
                                     <div><?=$requestsRow['xstatus'];?></div>
                                 </div>
                             </td>

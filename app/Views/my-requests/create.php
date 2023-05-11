@@ -31,9 +31,14 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-row" id="req-frm-details-container"></div>    
-                <div class="form-group text-right">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-row m-b-75" id="req-frm-details-container"></div>    
+                
+        </div>
+        <div class="card-footer">
+                <div class="form-row">
+                    <div class="form-group col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -96,7 +101,11 @@
                 break;
             case "OTHERS":
             case "GRPHDES":
-                description = $(".ql-editor").html();            
+            case "SYSBUG":
+
+                description = $(".ql-editor").html();      
+                reqdetails += "&requestcategory="+$("#selreqcategory").val();
+                reqdetails += "&requestcode="+$("#selreqtype").val();
                 break;
             case "ICTREP":
             case "TECHSUPP": 
@@ -104,6 +113,7 @@
                 description = $(".ql-editor").html();            
                 break;
             case 'CONRM':
+            case 'ICTSYS':
                 $('input[name="confictrequested"]:checked').each(function() {
                     strcontainer += this.value;
                     if (cntr < $('input[name="confictrequested"]:checked').length) {
@@ -112,6 +122,9 @@
                     }
                 });
                 reqdetails = "confictrequested="+strcontainer;
+                reqdetails += "&requestcategory="+$("#selreqcategory").val();
+                reqdetails += "&requestcode="+$("#selreqtype").val();
+
             break;
             default:
                 break;

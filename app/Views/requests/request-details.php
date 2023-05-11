@@ -77,11 +77,11 @@
             </div>
         </div> -->
         <div class="row m-v-20 border-top">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <img class="img-fluid text-opacity m-t-5" width="100" src="assets/images/logo/logo.png" alt="" />
             </div>
-            <div class="col-sm-6 text-right">
-                <small><span class="font-weight-semibold text-dark">Contact:</span> 0917 847 6513</small>
+            <div class="col-sm-4">
+                <small><span class="font-weight-semibold text-dark">Contact:</span> 0917 847 6513/0945 318 2617</small>
                 <br />
                 <small>mis@region10.dost.gov.ph</small>
             </div>

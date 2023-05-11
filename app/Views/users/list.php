@@ -64,7 +64,7 @@
                                             <?php
                                                 if ($usersRow['is_active'] == 1) {
                                                     $xstatus = 'Active';
-                                                    $badgestatus = 'success';
+                                                    $badgestatus = 'primary';
                                                 }else{
                                                     $xstatus = 'Inactive';
                                                     $badgestatus = 'danger';
